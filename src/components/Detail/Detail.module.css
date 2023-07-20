@@ -1,0 +1,28 @@
+.container {
+    color: aliceblue;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(50, 46, 77);
+    border-radius: 20px;
+    padding: 5px;
+    width: 1000px;
+    margin-left: 150px;
+    
+    
+
+}
+.description {
+    margin-left: 10px;
+}
+.butt {
+    border-radius: 10px;
+    border-color: aqua;
+    color: aqua;
+    background-color: #282c34;
+    height: 50px;
+    width: 120px;
+    font-family: cursive;
+    font-size: 20px ;
+}

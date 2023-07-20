@@ -1,0 +1,28 @@
+.contPrincipal {
+    display: grid;
+    grid-template-columns: 20% 20% 60%;
+    padding: 15px;
+    height: 80px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    background-color: rgb(50, 46, 77);
+    font-family: cursive;
+    letter-spacing: 2px;
+    
+    
+}
+
+.active {
+ 
+        -webkit-text-stroke:
+       1px rgb(9, 194, 55);
+        color: aliceblue;
+        text-underline-offset: 3px;
+        text-decoration-color: aqua;
+    }
+.disable {
+    text-decoration: none;
+    color: inherit;
+}
+
