@@ -1,0 +1,45 @@
+.container {
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(50, 46, 77);
+    border-radius: 20px;
+    padding: 20px; /* Ajustar el relleno para mejorar el aspecto visual en dispositivos móviles */
+    max-width: 1000px; /* Limitar el ancho máximo de la tarjeta */
+    width: 90%; /* Usar un ancho relativo para que se ajuste al tamaño del contenedor */
+    margin: 0 auto; /* Centrar horizontalmente la tarjeta en el contenedor padre */
+}
+
+/* Estilos para hacer el diseño responsivo */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Apilar los elementos verticalmente en dispositivos móviles */
+        align-items: flex-start; /* Alinear los elementos a la izquierda en dispositivos móviles */
+        padding: 10px; /* Reducir el relleno en dispositivos móviles */
+    }
+    
+    .description {
+        margin-left: 0; /* Resetear el margen izquierdo para que se alinee con el borde izquierdo en dispositivos móviles */
+        margin-top: 10px; /* Agregar un margen superior para separar la descripción del título en dispositivos móviles */
+        text-align: left; /* Alinear el texto a la izquierda en dispositivos móviles */
+    }
+    
+    .butt {
+        width: 100%; /* Hacer que el botón ocupe todo el ancho disponible en dispositivos móviles */
+        margin-top: 20px; /* Agregar un margen superior para separar el botón de la descripción en dispositivos móviles */
+        border-radius: 10px;
+        border-color: aqua;
+        color: aqua;
+        background-color: #282c34;
+        height: 50px;
+        width: 120px;
+        font-family: cursive;
+        font-size: 20px ;
+    } 
+    }
+
+
+
+   

@@ -1,0 +1,40 @@
+.contPrincipal {
+    display: flex;
+    align-items: center; /* Centrar verticalmente los elementos en la barra de navegación */
+    padding: 15px;
+    height: 80px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    font-size: 20px; /* Reducir el tamaño de fuente para dispositivos móviles */
+    background-color: rgb(50, 46, 77);
+    font-family: cursive;
+    letter-spacing: 2px;
+    text-align: initial;
+    justify-content: space-between;
+  }
+  
+  /* Estilos para hacer el diseño responsivo */
+  @media screen and (max-width: 768px) {
+    .contPrincipal {
+      flex-direction: column; /* Apilar los elementos verticalmente en dispositivos móviles */
+      height: auto; /* Ajustar la altura automáticamente según el contenido */
+      padding: 10px; /* Reducir el relleno en dispositivos móviles */
+    }
+    
+    .contPrincipal > * {
+      margin: 5px 0; /* Agregar un pequeño margen entre los elementos en dispositivos móviles */
+    }
+    
+    .disable {
+      display: none; /* Ocultar los elementos con clase 'disable' en dispositivos móviles */
+    }
+    
+    .active {
+      /* Los estilos 'active' se mantienen igual en dispositivos móviles */
+      -webkit-text-stroke: 1px rgb(9, 194, 55);
+      color: aliceblue;
+      text-underline-offset: 3px;
+      text-decoration-color: aqua;
+    }
+  }
+  

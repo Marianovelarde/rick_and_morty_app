@@ -1,0 +1,25 @@
+body {
+  background-image: url("./components/assets/img-fondo-rick2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Hace que el fondo se mantenga fijo al hacer scroll */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Estilos para hacer el diseño responsivo */
+@media screen and (max-width: 768px) {
+  /* Ajustar el tamaño del fondo para dispositivos móviles */
+  body {
+    background-size: auto 100vh;
+  }
+}

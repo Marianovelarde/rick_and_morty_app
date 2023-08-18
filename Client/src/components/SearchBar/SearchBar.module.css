@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 50px;
+    margin-top: 50px;
+    background-color: rgb(9, 194, 55);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px chartreuse;
+  }
+  
+  input {
+    font-family: cursive;
+    background-color: #282c34;
+    border-radius: 10px;
+    border-color: aqua;
+    color: white;
+    outline: none;
+    flex: 1; 
+    height: 35px;
+    padding: 0 10px; 
+  }
+  
+  .container button {
+    border-radius: 10px;
+    border-color: aqua;
+    color: aqua;
+    background-color: #282c34;
+    height: 40px;
+    font-family: cursive;
+    font-size: 13px;
+    margin-left: 10px; 
+  }
+  
+  button:hover {
+    color: #282c34;
+    background-color: aqua;
+    cursor: pointer;
+  }
+  
+  .random {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .random button {
+    border-radius: 10px;
+    width: 100px;
+    margin-right: 50px;
+  }
+  

@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Usar un ancho relativo para que se ajuste al tamaño del contenedor padre */
+    max-width: 300px; /* Limitar el ancho máximo de la carta para evitar que se desborde en pantallas muy grandes */
+    height: auto;
+    border: solid 1px black;
+    border-radius: 20px;
+    background-color: rgb(208, 233, 254);
+    box-shadow: 0 0 20px aqua;
+    transition: all 0.5s ease;
+    margin-bottom: 20px; /* Agregar un margen inferior para separar las cartas */
+}
+
+.container:hover {
+    transform: scale(1.1);
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Permitir que los botones se envuelvan en dispositivos móviles */
+}
+
+.button {
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 5px;
+    border: none;
+    background-color: red;
+    color: aliceblue;
+    padding: 5px 10px; /* Ajustar el relleno para que los botones sean más fáciles de tocar en dispositivos móviles */
+}
+
+.button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Hacer que la altura de la imagen sea automática para mantener la proporción */
+    border-radius: 10px 10px 0 0;
+}
+
+.imageContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.name {
+    color: aliceblue;
+    background-color: rgb(50, 46, 77);
+    width: auto;
+    height: auto;
+    font-family: cursive;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 5px; /* Agregar un relleno para mejorar el aspecto visual en dispositivos móviles */
+}
+
+.h22 {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgb(50, 46, 77);
+    border-radius: 10px;
+    flex-wrap: wrap; /* Permitir que los elementos internos se envuelvan en dispositivos móviles */
+}
+
+.h22 h2 {
+    margin: 0;
+    color: aliceblue;
+    padding: 3px;
+    font-size: 100%;
+    font-family: cursive;
+}
