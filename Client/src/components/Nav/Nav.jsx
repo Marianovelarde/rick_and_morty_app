@@ -33,9 +33,15 @@ const Nav = (props) => {
   return (
 
     <div className={styles.contPrincipal}>
-    <NavLinkMe className={styles.nave} to="/home">Home</NavLinkMe>
-    <NavLinkMe to="/about">About</NavLinkMe>
-    <NavLinkMe to="/favorites">Favorites</NavLinkMe>
+    <NavLinkMe to="/home">
+    <button className={`ov-btn-slide-left ${styles.navButton}`}>Home</button>
+    </NavLinkMe>
+      <NavLinkMe className={`${styles.buttonSlide}`} to="/about">
+      <button className={`ov-btn-slide-left ${styles.navButton}`}>About</button>
+      </NavLinkMe>
+      <NavLinkMe className={`${styles.buttonSlide}`} to="/favorites">
+      <button className={`ov-btn-slide-left ${styles.navButton}`}>Favorites</button>
+      </NavLinkMe>
     <SearchBar 
     onSearch={props.onSearch}
     logOut={props.logOut}

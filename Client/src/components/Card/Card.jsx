@@ -37,7 +37,7 @@ import { useState, useEffect } from "react";
 }
 
    return (
-      <Link to={`/detail/${id}`}>
+      
          <div className={styles.container}>
          <div className={styles.buttonContainer}>
                {isFav ? (
@@ -50,10 +50,11 @@ import { useState, useEffect } from "react";
                  {isFav ? null: ( <button className={styles.button} onClick={()=>onClose(id)}>X</button>)}
                 
             </div>
-
+      <Link to={`/detail/${id}`}>
          <div className={styles.imageContainer}>
          <img  src={image} alt="Not Found" />
          </div>
+      </Link>
 
          <h2 className={styles.name}>{name}</h2>
          
@@ -64,7 +65,7 @@ import { useState, useEffect } from "react";
          
          </div>
 
-   </Link>
+
      
       
    );

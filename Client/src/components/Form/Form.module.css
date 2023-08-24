@@ -9,24 +9,57 @@
     color: aliceblue;
     margin: 50px auto; /* Centrar verticalmente y usar margen automático para centrar horizontalmente */
     padding: 20px; /* Agregar un relleno para mejorar la legibilidad */
-    background-color: rgb(9, 194, 55);
+    background-color: rgb(9, 194, 55, 0.5);
     box-shadow: 0 0 5px chartreuse;
     border-radius: 10px;
+    margin-top: 10px;
   }
 
   
-  .container button {
+  .login button {
     border-radius: 10px;
     border-color: aqua;
     color: aqua;
     background-color: #282c34;
-    height: 50px;
-    width: 120px;
+    height: 60px;
+    width: 100px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
     font-family: cursive;
-    font-size: 20px;
-    margin-top: 20px; /* Añadir un margen superior para separar el botón de los campos de entrada */
+    font-size: 18px;
+    margin-left: 10px; 
+  }
+  .login button:hover {
+    cursor: pointer;
+    color: #282c34;
+  
+  }
+  .login button::after {
+    content: "";
+    color: #282c34;
+    background: aqua;
+    position:absolute;
+    z-index: -1;
+    padding: 16px 20px;
+  display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    transition: all 0.35s;
+  }
+  .login button:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition:  all 0.35s;
   }
   
+
+
   .container img {
     width: 100%; /* Hacer que la imagen se adapte al ancho del contenedor */
     max-width: 350px; /* Limitar el ancho máximo de la imagen para evitar que sea demasiado grande en pantallas grandes */

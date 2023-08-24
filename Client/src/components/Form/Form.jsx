@@ -56,10 +56,10 @@ const Form = (props) => {
         onChange={handleChange}
         className={errors.password && styles.warning}
         />
-        
+        <div className={styles.login}>
         {errors.password ? <p>{errors.password}</p> : null}
         <button type='submit'>Login</button>
-        
+        </div>
         </form>
       </div>
   )

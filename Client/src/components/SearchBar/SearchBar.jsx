@@ -16,13 +16,20 @@ export default function SearchBar(props) {
 
    return (
       <div className={styles.container}>
-      <div className={styles.random}>
-      <button  onClick={props.addRandomCharacter}><strong>Personajes Random</strong></button>
-      
-      </div>
+         <div className={styles.random}>
+            <button onClick={props.addRandomCharacter}><strong>Personajes Random</strong></button>
+         </div>
+         
                 <input type='text' value={id} onChange={handleChange} placeholder="Id..."/>
-      <button onClick={handleSearch}><strong>Agregar</strong></button> 
-      <button onClick={props.logOut}>Logout</button>
-      </div>
+         
+         <div className={styles.addButton}>
+                <button onClick={handleSearch}><strong>Agregar</strong></button> 
+         </div>
+         
+         <div className={styles.logout}>
+            <button onClick={props.logOut}>Logout</button>
+         </div>      
+      
+         </div>
    );
 }

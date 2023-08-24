@@ -8,7 +8,7 @@ import About from "./components/About/About"
 import Detail from "./components/Detail/Detail"
 import Form from './components/Form/Form'
 import Favorites from "../src/components/Favorites/Favorites"
-import axios from "axios"
+import axios from "axios" 
 
 
 
@@ -26,6 +26,7 @@ function App () {
        .then((data) => {
           if (data.name) {
             const exists = characters.some((character) => character.id === data.id);
+        
         if (!exists) {
           setCharacters((oldChars) => [...oldChars, data]);  
         }
@@ -45,6 +46,7 @@ function App () {
       
       setCharacters(filtered)
     }
+    
 
     // const login = (userData) => {
     // if(userData.userName === userName &&
