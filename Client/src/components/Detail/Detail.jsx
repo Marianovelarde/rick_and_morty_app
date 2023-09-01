@@ -9,6 +9,7 @@ const Detail = (props) => {
 
   const {detailId} = useParams()
   const [character, setCharacter] = useState({})
+   const [location, setLocation] = useState({});
   const navigate = useNavigate()
 
   useEffect(() => {
@@ -17,7 +18,18 @@ const Detail = (props) => {
       .then((data) => { 
         if (data.name) {
           setCharacter(data);
-        } else {
+          
+          if (data.location && data.location.url) {
+            fetch(data.location.url)
+              .then((locationResponse) => locationResponse.json())
+              .then((locationData) => setLocation(locationData))
+              .catch((locationErr) => {
+                console.error("Error fetching location:", locationErr);
+              });
+          }
+        }
+        
+         else {
           window.alert("No hay personajes con ese ID");
         }
       })
@@ -30,15 +42,15 @@ const Detail = (props) => {
   return (
     <div className={styles.container}>
     <div className={styles.description}>
-    
-    <button className={styles.butt} onClick={() => navigate("/home")}>Regresar</button>
-    
+    <div className={styles.back}>
+    <button  onClick={() => navigate("/home")}>Regresar</button>
+    </div>
     <h1>Name: {character.name}</h1>
     <h1>Status: {character.status}</h1>
     <h1>Gender: {character.gender}</h1>
     <h1>Species: {character.species}</h1>
-    <h1>Origin: {character.origin?.name}</h1>
-    <h1>Location: {character.location?.name}</h1>
+    <h1>Origin: {character.origin}</h1>
+    <h1>Location: {location.name}</h1>
     
     </div>
     <img className={styles.image} src={character.image} alt="Imagen"/>

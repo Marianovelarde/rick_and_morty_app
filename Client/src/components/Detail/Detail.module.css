@@ -13,33 +13,57 @@
 }
 
 /* Estilos para hacer el diseño responsivo */
+/*
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column; /* Apilar los elementos verticalmente en dispositivos móviles */
-        align-items: flex-start; /* Alinear los elementos a la izquierda en dispositivos móviles */
-        padding: 10px; /* Reducir el relleno en dispositivos móviles */
-    }
-    
+    /*    align-items: flex-start; /* Alinear los elementos a la izquierda en dispositivos móviles */
+    /*   padding: 10px; /* Reducir el relleno en dispositivos móviles }*/
     .description {
         margin-left: 0; /* Resetear el margen izquierdo para que se alinee con el borde izquierdo en dispositivos móviles */
         margin-top: 10px; /* Agregar un margen superior para separar la descripción del título en dispositivos móviles */
         text-align: left; /* Alinear el texto a la izquierda en dispositivos móviles */
-    }
+    } 
     
-    .butt {
-        width: 100%; /* Hacer que el botón ocupe todo el ancho disponible en dispositivos móviles */
-        margin-top: 20px; /* Agregar un margen superior para separar el botón de la descripción en dispositivos móviles */
+    .back button {
         border-radius: 10px;
         border-color: aqua;
         color: aqua;
         background-color: #282c34;
-        height: 50px;
-        width: 120px;
+        height: 60px;
+        width: 100px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        display: inline-block;
         font-family: cursive;
-        font-size: 20px ;
-    } 
-    }
-
-
-
-   
+        font-size: 18px;
+        margin-left: 10px; 
+      }
+      .back button:hover {
+        cursor: pointer;
+        color: #282c34;
+      
+      }
+      .back button::after {
+        content: "";
+        color: #282c34;
+        background: aqua;
+        position:absolute;
+        z-index: -1;
+        padding: 16px 20px;
+      display: block;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        right: 100%;
+        transition: all 0.35s;
+      }
+      .back button:hover::after {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        transition:  all 0.35s;
+      }
+    
